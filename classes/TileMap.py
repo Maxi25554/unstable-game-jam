@@ -68,7 +68,7 @@ class TileMap:
         
         self.tilemap[pos_y][pos_x] = 0 #Change tile back to air(essentially destroying whatever was there)
 
-    def display_tile_map(self):
+    def render_tilemap(self):
         pass
 
     def check_collisions(self):
