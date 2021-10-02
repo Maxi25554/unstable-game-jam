@@ -12,6 +12,10 @@ fps = 30
 pygame.display.set_caption('decay hook')
 bg = pygame.image.load("images/wood_bg.jpg")
 
+#Player
+player = Player(width / 2, height / 2)
+
+
 
 # Creates the screen/window
 screen = pygame.display.set_mode(size)
@@ -30,7 +34,7 @@ while True:
         elif event.type == pygame.MOUSEBUTTONUP:
             mousePos = pygame.mouse.get_pos()
             print (mousePos)
-            mouseAngle = math.degrees(math.atan2(mousePos[1]-Player.y(), mousePos[0]-Player.x()))
+            mouseAngle = math.degrees(math.atan2(mousePos[1]-player.y, mousePos[0]-player.x))
             print (mouseAngle)
 
     
