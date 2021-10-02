@@ -21,4 +21,14 @@ class TileMap:
             DIRT : None,
             WATER : None
         }
+        self.tilemap = []
+
+    def create_tilemap(self):
+        for i in range(self.mapwidth):
+            self.tilemap.append([])
         
+        for i in range(self.mapwidth):
+            list = self.tilemap[i]
+            for y in range(self.mapheight):
+                list.append(0)
+                self.tilemap[i] = list
