@@ -4,6 +4,8 @@ from classes.GameObject import GameObject
 
 class Player(GameObject):
     def __init__(self, x, y):
+        self.x = x
+        self.y = y
         player = self.load_image('images/player.png')
         self.set_image(player, 25, 32)
 
