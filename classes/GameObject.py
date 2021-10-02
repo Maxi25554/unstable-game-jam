@@ -19,7 +19,7 @@ class GameObject:
         self.collision_objects = []
 
     def load_image(self, file_name):
-        return os.path.join('Images', file_name)
+        return os.path.join('images', file_name)
 
     def set_image(self, image, width, height):
         self.image_orig = pygame.image.load(image).convert_alpha()
