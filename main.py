@@ -19,11 +19,10 @@ while True:
     ev = pygame.event.get()
     for event in ev:
 
-        # handle MOUSEBUTTONUP
+        # handle click
         if event.type == pygame.MOUSEBUTTONUP:
             pos = pygame.mouse.get_pos()
             print (pos)
     
-
     screen.blit(bg, [0, 0])
     pygame.display.flip()
