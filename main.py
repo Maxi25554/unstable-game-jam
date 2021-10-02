@@ -1,7 +1,7 @@
 import sys
 import pygame
 from pygame.locals import *
-
+from classes import GameObject, Player
 
 pygame.init()
 
@@ -19,12 +19,12 @@ while True:
     ev = pygame.event.get()
     for event in ev:
 
-        #Close Game
+        # Close Game
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
-        # handle click
+        # Handle click
         if event.type == pygame.MOUSEBUTTONUP:
             pos = pygame.mouse.get_pos()
             print (pos)
