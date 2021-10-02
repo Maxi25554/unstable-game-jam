@@ -10,17 +10,17 @@ fps = 30
 pygame.display.set_caption('decay hook')
 bg = pygame.image.load("images/wood_bg.jpg")
 
+# Creates the screen/window
 screen = pygame.display.set_mode(size)
 
+# Load classes
 from classes.GameObject import GameObject
 from classes.Player import Player
 
-#Player
+# Player
 player = Player(400, 300)
 
 
-
-# Creates the screen/window
 
 # Main loop
 while True:
