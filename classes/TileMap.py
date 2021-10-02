@@ -22,6 +22,8 @@ class TileMap:
             WATER : None
         }
         self.tilemap = []
+        self.highest_tile_index = WATER
+        self.lowest_tile_index = AIR
 
     def create_tilemap(self):
         for i in range(self.mapwidth):
@@ -32,3 +34,23 @@ class TileMap:
             for y in range(self.mapheight):
                 list.append(0)
                 self.tilemap[i] = list
+
+    def add_tile(self, x_pos, y_pos, tile):
+
+        #Check if tile variable is a valid tile
+        if tile > self.highest_tile_index or tile < self.lowest_tile_index:
+            print(f"Error: Tile cannot be bigger than index {self.highest_tile_index} or lower than index {self.lowest_tile_index}")
+            return
+
+        #If tile is valid, find specified tile position and change it accordingly
+        pos_x = 0
+        pos_y = 0
+        for x in range(self.mapwidth):
+            if x == x_pos:
+                pos_x = x
+        
+        for y in range(self.mapheight):
+            if y == y_pos:
+                pos_y = y
+        
+        self.tilemap[pos_y][pos_x] = tile
