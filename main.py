@@ -2,7 +2,8 @@ import sys
 import pygame
 from pygame.locals import *
 import math
-from classes import GameObject, Player
+from classes.GameObject import GameObject
+from classes.Player import Player
 
 pygame.init()
 
@@ -29,7 +30,8 @@ while True:
         elif event.type == pygame.MOUSEBUTTONUP:
             mousePos = pygame.mouse.get_pos()
             print (mousePos)
-            mouseAngle = 
+            mouseAngle = math.degrees(math.atan2(mousePos[1]-Player.y(), mousePos[0]-Player.x()))
+            print (mouseAngle)
 
     
     screen.blit(bg, [0, 0])

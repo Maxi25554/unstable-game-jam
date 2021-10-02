@@ -1,7 +1,6 @@
 import pygame
-import GameObject
-
 from classes.GameObject import GameObject
+
 
 class Player(GameObject):
     def __init__(self, x, y):
