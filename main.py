@@ -1,6 +1,7 @@
 import sys
 import pygame
 from pygame.locals import *
+import math
 from classes import GameObject, Player
 
 pygame.init()
@@ -25,9 +26,11 @@ while True:
             sys.exit()
 
         # Handle click
-        if event.type == pygame.MOUSEBUTTONUP:
-            pos = pygame.mouse.get_pos()
-            print (pos)
+        elif event.type == pygame.MOUSEBUTTONUP:
+            mousePos = pygame.mouse.get_pos()
+            print (mousePos)
+            mouseAngle = 
+
     
     screen.blit(bg, [0, 0])
     pygame.display.flip()
