@@ -15,7 +15,7 @@ class Player(GameObject):
     def throw_grapple_hook(self):
         pass
 
-    def check_lives(self):
+    def check_lives(self, lives):
         if lives <= 0:
             #Restart Level
             return
