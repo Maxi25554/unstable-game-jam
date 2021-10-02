@@ -1,4 +1,5 @@
 import pygame
+import GameObject
 
 from classes.GameObject import GameObject
 
@@ -10,3 +11,16 @@ class Player(GameObject):
         self.gravity = 0
 
         self.handle_key_events = True
+
+        self.lives = 3
+
+    def throw_grapple_hook(self):
+        pass
+
+    def check_lives(self, lives):
+        if lives <= 0:
+            #Restart Level
+            return
+    
+    def set_lives(self, lives):
+        self.lives = lives
