@@ -20,6 +20,11 @@ while True:
     ev = pygame.event.get()
     for event in ev:
 
+        #Close Game
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
         # handle click
         if event.type == pygame.MOUSEBUTTONUP:
             pos = pygame.mouse.get_pos()
