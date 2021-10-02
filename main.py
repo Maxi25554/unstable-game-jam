@@ -2,8 +2,6 @@ import sys
 import pygame
 from pygame.locals import *
 import math
-from classes.GameObject import GameObject
-from classes.Player import Player
 
 pygame.init()
 
@@ -12,13 +10,17 @@ fps = 30
 pygame.display.set_caption('decay hook')
 bg = pygame.image.load("images/wood_bg.jpg")
 
+screen = pygame.display.set_mode(size)
+
+from classes.GameObject import GameObject
+from classes.Player import Player
+
 #Player
-player = Player(width / 2, height / 2)
+player = Player(400, 300)
 
 
 
 # Creates the screen/window
-screen = pygame.display.set_mode(size)
 
 # Main loop
 while True:
@@ -34,7 +36,7 @@ while True:
         elif event.type == pygame.MOUSEBUTTONUP:
             mousePos = pygame.mouse.get_pos()
             print (mousePos)
-            mouseAngle = math.degrees(math.atan2(mousePos[1]-player.y, mousePos[0]-player.x))
+            mouseAngle = math.degrees(math.atan2(mousePos[1]-100, mousePos[0]-100))
             print (mouseAngle)
 
     
