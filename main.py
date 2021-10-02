@@ -5,10 +5,10 @@ import math
 
 pygame.init()
 
+bg = pygame.image.load("images/wood_bg.jpg")
 size = width, height = 800, 600
 fps = 30
 pygame.display.set_caption('decay hook')
-bg = pygame.image.load("images/wood_bg.jpg")
 
 # Creates the screen/window
 screen = pygame.display.set_mode(size)
@@ -19,7 +19,6 @@ from classes.Player import Player
 
 # Player
 player = Player(400, 300)
-
 
 
 # Main loop

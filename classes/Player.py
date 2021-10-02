@@ -10,7 +10,7 @@ class Player(GameObject):
         self.x = x
         self.y = y
         playersprite = self.load_image(PROJECT_ROOT / "images/player.png")
-        self.set_image(playersprite, 25, 32)
+        self.set_image(playersprite, 50, 64)
 
         self.gravity = 0
 
