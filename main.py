@@ -8,6 +8,7 @@ pygame.init()
 size = width, height = 800, 600
 speed = [2, 2]
 black = 0, 0, 0
+fps = 30
 
 # Creates the screen
 screen = pygame.display.set_mode(size)
