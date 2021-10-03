@@ -20,9 +20,11 @@ from classes.Player import Player
 # Player
 player = Player(400, 300)
 
+clock = pygame.time.Clock()
 
 # Main loop
 while True:
+    clock.tick(30)
     ev = pygame.event.get()
     for event in ev:
 
@@ -38,6 +40,8 @@ while True:
             mouseAngle = math.degrees(math.atan2(mousePos[1]-100, mousePos[0]-100))
             print (mouseAngle)
 
-    
+    player.update
+    async def on_guild_remove(self, guild:discord.Guild):
     screen.blit(bg, [0, 0])
+    
     pygame.display.flip()
