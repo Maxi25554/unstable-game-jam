@@ -23,7 +23,9 @@ class Player(GameObject):
         offimage = pygame.image.load(PROJECT_ROOT / "images/player.png")
         self.xoffset = (offimage.get_width()/2)
         self.yoffset = (offimage.get_height()/2)
-        self.update()
+
+        self.gpoint = [0,0]
+        self.grapple = False
 
 
     def throw_grapple_hook(self):

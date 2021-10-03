@@ -42,8 +42,12 @@ while True:
             print (mousePos)
             mouseAngle = math.degrees(math.atan2(mousePos[1]-100, mousePos[0]-100))
             print (mouseAngle)
-            player.x_speed += 10
+            player.gpoint[0] = mousePos[0]
+            player.gpoint[1] = mousePos[1]
+            player.grapple = True
     screen.blit(bg, [0, 0])
     screen.blit(player.image, ((player.x-player.xoffset),(player.y-player.yoffset)))
+    if player.grapple == True:
+        pygame.draw.line(screen, (0,0,0), (player.x, player.y), player.gpoint, width = 5)
     player.update()
     pygame.display.flip()
