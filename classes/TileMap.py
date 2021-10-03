@@ -20,10 +20,10 @@ class TileMap:
         self.textures = {
             AIR : 0,
             BARRIER : 0,
-            STONE : self.load_image(PROJECT_ROOT / "images/stone.png"),
-            GRASS : self.load_image(PROJECT_ROOT / "images/grass.png"),
-            DIRT : self.load_image(PROJECT_ROOT / "images/dirt.png"),
-            WATER : self.load_image(PROJECT_ROOT / "images/water.png")
+            STONE : self.load_image(PROJECT_ROOT / "images/tiles/stone.png"),
+            GRASS : self.load_image(PROJECT_ROOT / "images/tiles/grass.png"),
+            DIRT : self.load_image(PROJECT_ROOT / "images/tiles/dirt.png"),
+            WATER : self.load_image(PROJECT_ROOT / "images/tiles/water.png")
         }
         self.tilemap = []
         self.highest_tile_index = WATER

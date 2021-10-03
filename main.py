@@ -42,6 +42,8 @@ while True:
             print (mousePos)
             mouseAngle = math.degrees(math.atan2(mousePos[1]-100, mousePos[0]-100))
             print (mouseAngle)
+            player.x_speed += 10
     screen.blit(bg, [0, 0])
     screen.blit(player.image, ((player.x-player.xoffset),(player.y-player.yoffset)))
+    player.update()
     pygame.display.flip()
