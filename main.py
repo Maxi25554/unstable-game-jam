@@ -9,6 +9,8 @@ bg = pygame.image.load("images/wood_bg.jpg")
 size = width, height = 800, 600
 fps = 30
 pygame.display.set_caption('decay hook')
+centre_x = 400
+centre_y = 300
 
 # Creates the screen/window
 screen = pygame.display.set_mode(size)
@@ -21,6 +23,7 @@ from classes.Player import Player
 player = Player(400, 300)
 
 clock = pygame.time.Clock()
+
 
 # Main loop
 while True:
@@ -39,9 +42,6 @@ while True:
             print (mousePos)
             mouseAngle = math.degrees(math.atan2(mousePos[1]-100, mousePos[0]-100))
             print (mouseAngle)
-
-    player.update
-    async def on_guild_remove(self, guild:discord.Guild):
     screen.blit(bg, [0, 0])
-    
+    screen.blit(player.image, ((player.x-player.xoffset),(player.y-player.yoffset)))
     pygame.display.flip()
